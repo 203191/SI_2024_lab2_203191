@@ -2,26 +2,8 @@
 Петар Кицески,бр.на индекс 203191
 
 Сликата од барање 2 е прикачена на git.
-![SiCFG](https://github.com/203191/SI_2024_lab2_203191/assets/73073653/347c2fb8-3d70-4574-b176-2e42eee3b639)
+![CFG](https://github.com/203191/SI_2024_lab2_203191/assets/73073653/9d60d670-f501-40fa-9ba6-0075cb5b9405)
 
-
-1.Start Node Decision Node: allItems == null 
-Process Node: sum = 0 
-Loop Start: for (each item in allItems) 
-Decision Node: item.getName() == null || item.getName().length() == 0 
-Process Node: item.setName("unknown") 
-Decision Node: item.getBarcode() != null 
-Process Node: Validate barcode characters
- Decision Node: allowed.indexOf(c) == -1
- Process Node: Exception: Invalid character 
-Decision Node: item.getDiscount() > 0
- Process Node: sum += item.getPrice() * item.getDiscount()
- Process Node: sum += item.getPrice()
- Decision Node: item.getPrice() > 300 && item.getDiscount() > 0 && item.getBarcode().charAt(0) == '0'
- Process Node: sum -= 30
- End Loop Decision Node: sum <= payment
- Process Node: return true 
-Process Node: return false
 
 2.За Цикоматска комплексност ја користиме формулата M = E - N + 2P 
 Но во овај случај ќе пресметаме на следниот начин:
